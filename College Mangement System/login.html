@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - College Management</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('login.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login-box button {
+      background-color: #00c4cc;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .email-link {
+      color: aqua;
+      text-decoration: underline;
+    }
+
+    #login-message {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h2>College System</h2>
+    <div>
+      <a href="home.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <main>
+    <div class="login-box">
+      <h2>Login</h2>
+      <form onsubmit="return handleLogin(event)">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="login-message"></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    For enquiries, <a href="mailto:college@example.com" class="email-link">email us</a>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const msg = document.getElementById("login-message");
+      msg.textContent = "Login successful!";
+      msg.style.color = "lightgreen";
+    }
+  </script>
+
+</body>
+</html>

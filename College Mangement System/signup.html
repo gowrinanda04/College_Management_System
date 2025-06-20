@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signup - College Management</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('signup.jpeg'); /* ✅ Use signup.jpeg */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+    }
+
+    nav h2 {
+      display: inline;
+      color: white;
+    }
+
+    nav div {
+      float: right;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+    }
+
+    .signup-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .signup-box button {
+      background-color: #00c4cc;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 10px;
+    }
+
+    a.email-link {
+      color: aqua;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>College System</h2>
+    <div>
+      <a href="home.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Signup Box -->
+  <main>
+    <div class="signup-box">
+      <h2>Signup</h2>
+      <form onsubmit="return handleSignup(event)">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Register</button>
+      </form>
+      <p id="message"></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    For enquiries, <a href="mailto:college@example.com" class="email-link">email us</a>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+      document.getElementById("message").textContent = "Signup successful!";
+      document.getElementById("message").style.color = "lightgreen";
+    }
+  </script>
+
+</body>
+</html>
